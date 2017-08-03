@@ -33,9 +33,15 @@
             <select name="categoria" class="form-control">
                 <?php
                 foreach ($categorias as $cat) {
-                    ?>
-                    <option value="<?php echo $cat->cat_codigo ?>" selected><?php echo $cat->cat_nome ?></option>
-                    <?php
+                    if ($cat->cat_codigo != $produto[0]->categoria) {
+                        ?>
+                            <option value="<?php echo $cat->cat_codigo ?>"><?php echo $cat->cat_nome ?></option>
+                        <?php
+                    } else {
+                        ?>
+                            <option value="<?php echo $cat->cat_codigo ?>" selected><?php echo $cat->cat_nome ?></option>
+                        <?php
+                    }
                 }
                 ?>
             </select>
@@ -58,7 +64,7 @@
         </div>
 
         <div class="pull-right action">
-            <a href="<?php echo base_url() ?>categoria" class="btn btn-danger">Voltar</a>
+            <a href="<?php echo base_url() ?>produto" class="btn btn-danger">Voltar</a>
         </div>
     </form>
 </div>
