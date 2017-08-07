@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap.css">
 	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/custom.css">
         <link rel="stylesheet" href="<?php echo base_url()?>assets/css/jquery-ui.min.css">
+        <link rel="stylesheet" href="<?php echo base_url()?>assets/css/summernote.css">
 </head>
 <body>
 
@@ -31,6 +32,7 @@
           <li><a href="<?php echo base_url()?>categoria">Categoria</a></li>
           <li><a href="<?php echo base_url()?>produto">Produto</a></li>
           <li><a href="<?php echo base_url()?>banner">Banner</a></li>
+          <li><a href="<?php echo base_url()?>noticia">Notícia</a></li>
           <li><a href="<?php echo base_url()?>login/logout">Sair</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
