@@ -3,8 +3,7 @@
 <div class="container">
 	<h1>Cadastro de Produtos</h1>
 	<br>
-
-	<form action="<?php echo base_url()?>produto/salvar" method="POST">
+        <?php echo form_open_multipart('produto/salvar');?>
 
 		<div class="input-group col-md-12">
 			<label for="pro_nome">Nome do Produto</label>
@@ -16,6 +15,13 @@
                 <div class="input-group col-md-12">
 			<label for="pro_descricao">Descrição do Produto</label>
 			<input type="text" class="form-control col-md-12" name="pro_descricao" id="pro_descricao" placeholder="Nome do Produto" value="">
+		</div>
+                
+                <br>
+                
+                <div class="input-group col-md-12">
+			<label for="pro_img">Foto do Produto</label>
+			<input type="file" class="" name="pro_img" id="pro_img">
 		</div>
                 
                 <br>

@@ -52,8 +52,8 @@
         <div class="input-group col-md-12">
             <label for="pro_status">Status</label>
             <select name="pro_status" class="form-control">
-                <option value="A">Ativo</option>
-                <option value="D">Desativado</option>
+                <option value="A" <?php if($produto[0]->pro_status == 'A') {echo 'selected';}?>>Ativo</option>
+                <option value="D" <?php if($produto[0]->pro_status == 'D') {echo 'selected';}?>>Desativado</option>
             </select>
         </div>
 
