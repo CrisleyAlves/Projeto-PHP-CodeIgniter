@@ -4,8 +4,10 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
+        
 	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap.css">
 	<link rel="stylesheet" href="<?php echo base_url()?>assets/css/custom.css">
+        <link rel="stylesheet" href="<?php echo base_url()?>assets/css/jquery-ui.min.css">
 </head>
 <body>
 
@@ -28,6 +30,7 @@
           <li><a href="<?php echo base_url()?>ingrediente">Ingrediente</a></li>
           <li><a href="<?php echo base_url()?>categoria">Categoria</a></li>
           <li><a href="<?php echo base_url()?>produto">Produto</a></li>
+          <li><a href="<?php echo base_url()?>banner">Banner</a></li>
           <li><a href="<?php echo base_url()?>login/logout">Sair</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->

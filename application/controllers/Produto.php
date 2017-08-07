@@ -52,14 +52,12 @@ class Produto extends CI_Controller {
 				ENVIANDO UMA POR UMA
 			*/
 
-			
+			for ($i=0; $i < $number_of_files; $i++) {
 				$_FILES['pro_img']['name'] = $files['pro_img']['name'];
 				$_FILES['pro_img']['type'] = $files['pro_img']['type'];
 				$_FILES['pro_img']['tmp_name'] = $files['pro_img']['tmp_name'];
 				$_FILES['pro_img']['error'] = $files['pro_img']['error'];
 				$_FILES['pro_img']['size'] = $files['pro_img']['size'];
-                                
-                                
 
 				$config['upload_path'] = './uploads';
 				$config['allowed_types'] = 'gif|jpg|png|pdf';
@@ -77,7 +75,7 @@ class Produto extends CI_Controller {
 				}else{
 					$error = array('upload_data' => $this->upload->data());
 				}
-			
+			}
                         
 		}else{
 			
