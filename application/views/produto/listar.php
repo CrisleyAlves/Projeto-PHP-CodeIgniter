@@ -26,7 +26,7 @@
                     <td><?php echo $pro->pro_descricao ?></td>
                     <td><?php echo $pro->pro_valor ?></td>
                     <td><?php echo $pro->pro_status ?></td>
-                    <td><?php echo $pro->categoria ?></td>
+                    <td><?php echo $pro->cat_nome?></td>
 
                     <td>
                         <a href="<?php echo base_url('produto/deletar/' . $pro->pro_codigo) ?>" onclick="confirm('Deseja realmente excluir o produto?");>

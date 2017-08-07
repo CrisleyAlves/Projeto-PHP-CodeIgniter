@@ -24,9 +24,9 @@
                     <td><?php echo $not->not_codigo ?></td>
                     <td><?php echo $not->not_titulo ?></td>
                     <td><?php echo $not->not_texto ?></td>
-                    <td><?php echo $not->not_imagem ?></td>
+                    <td><img src="<?php echo base_url()?>uploads/noticia/<?php echo $not->not_imagem?>" style="width: 100px;"/></td>
                     <td><?php echo $not->not_data ?></td>
-                    <td><?php echo $not->categoria ?></td>
+                    <td><?php echo $not->cat_nome ?></td>
 
                     <td>
                         <a href="<?php echo base_url('noticia/deletar/' . $not->not_codigo) ?>" onclick="confirm('Deseja realmente excluir o produto?");>

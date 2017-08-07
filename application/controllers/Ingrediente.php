@@ -19,11 +19,13 @@ class Ingrediente extends CI_Controller {
 	}
 
 	public function salvar(){
-		$data['ing_nome'] = $this->input->post('ing_nome');
-
-		if($this->db->insert('ingredientes', $data)){
+		$this->load->model('ingrediente_model', 'ingrediente');
+                
+                if($this->ingrediente->salvar()){
                     redirect('ingrediente');
-		}
+                }else{
+                    redirect('ingrediente');
+                }
 	}
 
 	public function editar($id = null){
@@ -36,26 +38,18 @@ class Ingrediente extends CI_Controller {
 
 	public function editar_salvar($id = null){
             
-            	//id sendo recebido do formulário
-		$id = $this->input->post('id');
-
-		//dados vai ser atualizado
-		$data['ing_nome'] = $this->input->post('ing_nome');
-
-		//fazendo consulta no banco com base no id recebido para saber se existe o dado
-		$this->db->where('ing_codigo', $id);
-
-		if($id != null){
-			$this->db->update('ingredientes', $data);
-			redirect('ingrediente');
-		}else{
-			redirect('ingrediente');
-		}
+            	$this->load->model('ingrediente_model', 'ingrediente');
+                
+                if($this->ingrediente->editar_salvar()){
+                    redirect('ingrediente');
+                }else{
+                    redirect('ingrediente');
+                }
 	}
 
 	public function deletar($id = null){
-		$this->db->where('ing_codigo', $id);
-		if($this->db->delete('ingredientes')){
+                $this->load->model('ingrediente_model', 'ingrediente');
+                if($this->ingrediente->deletar($id)){
 			redirect('ingrediente');
 		}else{
 			redirect('ingrediente');
