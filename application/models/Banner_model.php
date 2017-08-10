@@ -71,10 +71,18 @@ class Banner_model extends Ci_Model {
     }
     
     public function deletar($id = null){
+            
+            //primeiro pesquiso no banco e removo a imagem
+            $this->db->where('ban_codigo', $id);
+            $data['banner'] = $this->db->get('banners')->result();
+            unlink( FCPATH . "uploads/banners/" . $data['banner'][0]->ban_nome);
+            
+            
+           //depois removo a informação no banco, não sei porque tive que fazer duas vezes -\_/- 
+        
             $data['banner'] = $this->db->get('banners')->result();
             $this->db->where('ban_codigo', $id);
             
-            unlink( FCPATH . "uploads/banners/" . $data['banner'][0]->ban_nome);
             return $this->db->delete('banners');
 	}
 

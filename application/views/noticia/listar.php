@@ -23,8 +23,8 @@
                 <tr>
                     <td><?php echo $not->not_codigo ?></td>
                     <td><?php echo $not->not_titulo ?></td>
-                    <td><?php echo $not->not_texto ?></td>
-                    <td><img src="<?php echo base_url()?>uploads/noticia/<?php echo $not->not_imagem?>" style="width: 100px;"/></td>
+                    <td><?php echo substr($not->not_texto, 0, 200); ?></td>
+                    <td><img src="<?php echo base_url()?>uploads/noticia/<?php echo $not->not_imagem?>" style="width: 200px;"/></td>
                     <td><?php echo $not->not_data ?></td>
                     <td><?php echo $not->cat_nome ?></td>
 

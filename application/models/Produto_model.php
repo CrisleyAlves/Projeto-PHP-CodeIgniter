@@ -29,8 +29,8 @@ class Produto_model extends Ci_Model {
             /*
               VERIFICANDO SE A PASTA AS IMAGENS VÃO IR EXISTE, PERMISSÃO 0777,
              */
-            if (!is_dir('uploads')) {
-                mkdir('./uploads', 0777, true);
+            if (!is_dir('uploads/produtos')) {
+                mkdir('./uploads/produtos', 0777, true);
             }
 
 
@@ -45,7 +45,7 @@ class Produto_model extends Ci_Model {
                 $_FILES['pro_img']['error'] = $files['pro_img']['error'];
                 $_FILES['pro_img']['size'] = $files['pro_img']['size'];
 
-                $config['upload_path'] = './uploads';
+                $config['upload_path'] = './uploads/produtos';
                 $config['allowed_types'] = 'gif|jpg|png|pdf';
                 $config['max_size'] = '0';
                 $config['max_width'] = '0';
